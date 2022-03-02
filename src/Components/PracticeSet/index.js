@@ -18,10 +18,12 @@ const PracticeSet = (props) => {
   useEffect(() => {
     setIndex(props.currentIndex);
   }, [props.currentIndex]);
+  
   return (
     <div className="word-container">
       <h1 className="word">{words[index]}</h1>
     </div>
   );
 };
+
 export default PracticeSet;

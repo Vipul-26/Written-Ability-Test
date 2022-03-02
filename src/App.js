@@ -1,30 +1,20 @@
 import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import ButtonComponent from "./Components/buttoncomponent";
-import PracticeSet from "./Components/practiceSet";
+import Form from './components/Form/index';
+import Home from "./components/Home";
+import Sets from "./components/Sets";
 
 export default function App() {
-  let [currentIndex, setCurrentIndex] = useState(0);
+
   return (
     <div className="App">
       <Router>
-        <Navbar setCurrentIndex={setCurrentIndex} currentIndex={currentIndex} />
         <Switch>
-          <Route exact path="/" component={ButtonComponent} />
-          <Route
-            exact
-            path="/set:id"
-            render={(props) => (
-              <PracticeSet
-                {...props}
-                currentIndex={currentIndex}
-                setCurrentIndex={setCurrentIndex}
-              />
-            )}
-          />
+          <Route exact path="/" component={Form} />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/sets" component={Sets} />
         </Switch>
       </Router>
     </div>

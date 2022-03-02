@@ -1,0 +1,8 @@
+.word-container {
+    margin: 10%;
+}
+
+.word {
+    font-size: 15vw;
+    font-weight: 600;
+}
