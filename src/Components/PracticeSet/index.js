@@ -1,28 +1,46 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import NavBarComponent from '../Navbar/Navbar';
+import Timer from "../Timer";
+import './practiceSet.css';
 
 const PracticeSet = (props) => {
   const history = useHistory();
-  const words = (props.location && props.location.state) || [];
-  const [index, setIndex] = useState(0);
+  const { words, selval, selbell, userName } = (props.location && props.location.state) || [];
+  let [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    if (index >= words.length) {
+    if (currentIndex >= words.length) {
       props.setCurrentIndex(0);
       history.push({
         pathname: `/`
       });
     }
-  }, [index]);
+  }, [currentIndex]);
 
-  useEffect(() => {
-    setIndex(props.currentIndex);
-  }, [props.currentIndex]);
-  
   return (
-    <div className="word-container">
-      <h1 className="word">{words[index]}</h1>
-    </div>
+    <>
+      <NavBarComponent data={userName} />
+      <div className="setDiv">
+        <img src='./Set.png' className="imgSet" />
+        <div className="contentSet">
+          <img src="./Time.png" className="imgWid" />
+          <p className="paraP">
+            Remaining Time:
+          </p>
+          <Timer timer={selval} bell={selbell} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
+          <div className="word-container">
+            <p>
+              Below is the word:-
+            </p>
+            <h1 className="word">{words[currentIndex]}</h1>
+          </div>
+        </div>
+      </div>
+      <a href="/" className="anchor">
+        Back To HomePage
+      </a>
+    </>
   );
 };
 

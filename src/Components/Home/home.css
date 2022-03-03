@@ -1,7 +1,7 @@
 .mainDiv {
     display: flex;
     width: 50%;
-    height: 65vh;
+    height: 450px;
     margin: 100px auto;
     background-color: #FFFFFF;
     border-radius: 25px;
@@ -10,6 +10,7 @@
 .imgDiv {
     width: 50%;
     height: 100%;
+    border-radius: 25px 0 0 25px;
 }
 
 .contentDiv {
@@ -31,6 +32,7 @@
 .para {
     font-size: 0.8rem;
     margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .selDiv {
@@ -84,4 +86,48 @@ button:hover {
     border-color: #e2e2e2 !important;
     pointer-events: none;
     cursor: not-allowed;
+}
+
+option::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  }
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .mainDiv {
+        width: 70%;
+        height: 450px;
+        margin: 45px auto;
+    }
+
+    option {
+        font-size: 0.7rem;
+        min-height: 1em;
+        padding: 0px 1px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .mainDiv {
+        width: 90%;
+        height: 450px;
+        margin: 45px auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .imgDiv {
+        display: none;
+    }
+
+    .contentDiv {
+        width: 100%;
+    }
+
+    option {
+        font-size: 0.6rem;
+    }
 }

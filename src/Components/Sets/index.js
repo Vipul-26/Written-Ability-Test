@@ -12,18 +12,18 @@ const Sets = (props) => {
     const handleClick = (value, words) => {
         history.push({
             pathname: `/set${value}`,
-            state: { words, selval, selbell },
+            state: { words, selval, selbell, userName },
         });
     };
 
     return (
         <div className='set'>
             <NavBarComponent data={userName} />
-            <h2 className='heading'>Hey {userName.substr(0, userName.indexOf(' '))}</h2>
-            <p className='para'>
+            <h2 className='headingSet'>Hey {userName.substr(0, userName.indexOf(' '))}</h2>
+            <p className='paraSet'>
                 Please click on any set to attempt the test.
             </p>
-            <p className='para'>
+            <p className='paraSet'>
                 Each set contains 60 words on which you need write 5-10 lines within a certain limit of time.
             </p>
             <h4 className='subHead'>

@@ -3,6 +3,85 @@
 }
 
 .word {
-    font-size: 15vw;
+    font-size: 3vw;
     font-weight: 600;
+    color: blue;
+}
+
+.anchor {
+    margin-bottom: 1rem;
+    color: aliceblue;
+}
+
+.setDiv {
+    display: flex;
+    width: 50%;
+    height: 450px;
+    margin: 50px auto;
+    margin-bottom: 30px;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+}
+
+.imgSet {
+    width: 55%;
+    height: 100%;
+    border-radius: 25px 0 0 25px;
+}
+
+.contentSet {
+    width: 45%;
+    background-color: aquamarine;
+    border-radius: 0 25px 25px 0;
+}
+
+.imgWid {
+    width: 100px;
+    margin-top: 2rem;
+}
+
+.paraP {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .setDiv {
+        width: 70%;
+        margin: 40px auto;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .setDiv {
+        width: 94%;
+        margin: 100px auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .setDiv {
+        display: flex;
+        width: 85%;
+        height: 400px;
+        margin: 80px auto;
+    }
+
+    .imgSet {
+        display: none;
+    }
+
+    .contentSet {
+        width: 100%;
+        border-radius: 25px;
+    }
+
+    .word {
+        font-size: 7vw;
+        font-weight: 600;
+    }
+
+    .word-container {
+        margin: 5%;
+    }
 }
