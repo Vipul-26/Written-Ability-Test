@@ -6,13 +6,13 @@ import bell_phone from "../../asset/bell_phone.mp3";
 import './timer.css';
 
 const Timer = ({ timer, bell, currentIndex, setCurrentIndex }) => {
-  const [seconds, setSeconds] = useState(0);
+  const [seconds, setSeconds] = useState(timer);
   const [time, setTime] = useState(timer);
 
   useEffect(() => {
-    if (seconds <= time - 1) {
+    if (seconds <= time && seconds >= 0) {
       const interval = setInterval(() => {
-        setSeconds((seconds) => seconds + 1);
+        setSeconds((seconds) => seconds - 1);
       }, 1000);
       return () => clearInterval(interval);
     } else {
@@ -32,7 +32,7 @@ const Timer = ({ timer, bell, currentIndex, setCurrentIndex }) => {
         let snd = new Audio(bell_office);
         snd.play();
       }
-      setSeconds(0);
+      setSeconds(timer);
       setCurrentIndex(currentIndex + 1);
     }
   }, [seconds]);
