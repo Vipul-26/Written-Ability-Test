@@ -38,7 +38,7 @@ const PracticeSet = (props) => {
         </div>
       </div>
       <a href="/" className="anchor">
-        Back To HomePage
+        Back To HomePage 
       </a>
     </>
   );

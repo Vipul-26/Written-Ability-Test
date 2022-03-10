@@ -19,7 +19,9 @@ const Sets = (props) => {
     return (
         <div className='set'>
             <NavBarComponent data={userName} />
-            <h2 className='headingSet'>Hey {userName.substr(0, userName.indexOf(' '))}</h2>
+            <h2 className='headingSet'>
+                Hey {userName.substr(0, userName.indexOf(' '))}
+            </h2>
             <p className='paraSet'>
                 Please click on any set to attempt the test.
             </p>
