@@ -11,7 +11,8 @@ const PracticeSet = (props) => {
 
   useEffect(() => {
     if (currentIndex >= words.length) {
-      props.setCurrentIndex(0);
+      setCurrentIndex(0);
+      window.alert("Thank you for taking this test");
       history.push({
         pathname: `/`
       });
