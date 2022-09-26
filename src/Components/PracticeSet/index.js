@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import NavBarComponent from '../Navbar/Navbar';
-import Timer from "../Timer";
+import Timer from "../Timer/index";
 import './practiceSet.css';
 
 const PracticeSet = (props) => {
@@ -39,7 +39,7 @@ const PracticeSet = (props) => {
         </div>
       </div>
       <a href="/" className="anchor">
-        Back To HomePage 
+        Back To HomePage
       </a>
     </>
   );
