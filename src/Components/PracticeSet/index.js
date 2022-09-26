@@ -23,9 +23,9 @@ const PracticeSet = (props) => {
     <>
       <NavBarComponent data={userName} />
       <div className="setDiv">
-        <img src='./Set.png' className="imgSet" />
+        <img src='./Set.png' className="imgSet" alt="set" title="set" />
         <div className="contentSet">
-          <img src="./Time.png" className="imgWid" />
+          <img src="./Time.png" className="imgWid" alt='time' title='time' />
           <p className="paraP">
             Remaining Time:
           </p>

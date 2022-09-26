@@ -30,7 +30,7 @@ const Form = () => {
             <h2 id="headerTitle">
                 Written Ability Test
             </h2>
-            <img src='logo.png' alt='logo' className='img' />
+            <img src='logo.png' alt='logo' className='img' title='logo'/>
             <p className="mt-2">
                 Let's start with your name
             </p>
