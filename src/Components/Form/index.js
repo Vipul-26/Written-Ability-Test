@@ -36,9 +36,9 @@ const Form = () => {
             </p>
             <form onSubmit={handleSubmit}>
                 <div class="row">
-                    <label>
+                    {/* <label>
                         Username
-                    </label>
+                    </label> */}
                     <input type="text" placeholder="Enter your username" maxlength="20" onChange={(e) => setInpVal(e.target.value)} className={`${error ? 'errorInput' : ''}`} />
                     {error && (<span className="errorMsg">Please enter valid username.</span>)}
                 </div>
