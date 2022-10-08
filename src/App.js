@@ -2,10 +2,10 @@ import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Form from './components/Form/index';
-import Home from "./components/Home";
-import Sets from "./components/Sets";
-import PracticeSet from './components/PracticeSet';
+import Form from './Components/Form/index';
+import Home from "./Components/Home/index";
+import Sets from "./Components/Sets/index";
+import PracticeSet from './Components/PracticeSet/index';
 
 export default function App() {
 

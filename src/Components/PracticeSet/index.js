@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import NavBarComponent from '../Navbar/Navbar';
-import Timer from "../Timer";
+import Timer from "../Timer/index";
 import './practiceSet.css';
 
 const PracticeSet = (props) => {
@@ -23,9 +23,9 @@ const PracticeSet = (props) => {
     <>
       <NavBarComponent data={userName} />
       <div className="setDiv">
-        <img src='./Set.png' className="imgSet" />
+        <img src='./Set.png' className="imgSet" alt="set" title="set" />
         <div className="contentSet">
-          <img src="./Time.png" className="imgWid" />
+          <img src="./Time.png" className="imgWid" alt='time' title='time' />
           <p className="paraP">
             Remaining Time:
           </p>
@@ -39,7 +39,7 @@ const PracticeSet = (props) => {
         </div>
       </div>
       <a href="/" className="anchor">
-        Back To HomePage 
+        Back To HomePage
       </a>
     </>
   );

@@ -65,12 +65,12 @@ const Home = (props) => {
         <div id="home">
             <NavBarComponent data={userName} />
             <div className='mainDiv'>
-                <img src='./Welcome.png' className='imgDiv' />
+                <img src='./Welcome.png' className='imgDiv' alt='welcome' title='welcome' />
                 <div className='contentDiv'>
                     <h2 className='heading'>
                         Welcome {userName}
                     </h2>
-                    <img src='./User.png' className='useImg' />
+                    <img src='./User.png' className='useImg' alt='user' title='user' />
                     <p className='para'>
                         Please enter few more details to proceed.
                     </p>
