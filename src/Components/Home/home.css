@@ -94,7 +94,7 @@ option::after {
     height: 0.5em;
     background-color: var(--select-arrow);
     clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-  }
+}
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
     .mainDiv {

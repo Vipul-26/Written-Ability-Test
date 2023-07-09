@@ -3,7 +3,7 @@ import bell_church from "../../asset/bell_church.mp3";
 import bell_ring from "../../asset/bell_ring.mp3";
 import bell_office from "../../asset/bell_office.mp3";
 import bell_phone from "../../asset/bell_phone.mp3";
-import './timer.css';
+import "./timer.css";
 
 const Timer = ({ timer, bell, currentIndex, setCurrentIndex }) => {
   const [seconds, setSeconds] = useState(timer);
@@ -19,16 +19,13 @@ const Timer = ({ timer, bell, currentIndex, setCurrentIndex }) => {
       if (bell === "church") {
         let snd = new Audio(bell_church);
         snd.play();
-      }
-      else if (bell === "phone") {
+      } else if (bell === "phone") {
         let snd = new Audio(bell_phone);
         snd.play();
-      }
-      else if (bell === "ring") {
+      } else if (bell === "ring") {
         let snd = new Audio(bell_ring);
         snd.play();
-      }
-      else if (bell === "office") {
+      } else if (bell === "office") {
         let snd = new Audio(bell_office);
         snd.play();
       }
@@ -39,7 +36,8 @@ const Timer = ({ timer, bell, currentIndex, setCurrentIndex }) => {
 
   return (
     <h3 className="head">
-      {seconds}<span class="tiny"> s</span>
+      {seconds}
+      <span className="tiny"> s</span>
     </h3>
   );
 };

@@ -4,3 +4,8 @@
   font-family: "Noto Sans", sans-serif;
   text-align: center;
 }
+
+.bg-dark {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
