@@ -1,0 +1,116 @@
+.set {
+    text-align: left;
+}
+
+.set-btn {
+    margin: 24px 24px;
+}
+
+.practice {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0% 15%;
+}
+
+.headingSet {
+    font-size: 1.5rem;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    width: 11em;
+    animation: type 5s steps(60, end);
+    margin: 1.5rem auto 0.5rem auto;
+}
+
+@keyframes type {
+    from {
+        width: 0;
+    }
+}
+
+.paraSet {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    margin-left: 1rem;
+}
+
+ul li {
+    list-style: none;
+    position: relative;
+    padding: 3px 0 2px 25px;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+ul li::before {
+    content: '*';
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+.subHead {
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    animation: colorchange 3s infinite alternate;
+}
+
+@keyframes colorchange {
+    0% {
+        color: blue;
+    }
+
+    10% {
+        color: #8e44ad;
+    }
+
+    20% {
+        color: #1abc9c;
+    }
+
+    30% {
+        color: #d35400;
+    }
+
+    40% {
+        color: blue;
+    }
+
+    50% {
+        color: #34495e;
+    }
+
+    60% {
+        color: blue;
+    }
+
+    70% {
+        color: #2980b9;
+    }
+
+    80% {
+        color: #f1c40f;
+    }
+
+    90% {
+        color: #2980b9;
+    }
+
+    100% {
+        color: pink;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .paraSet {
+        margin-left: 0.5rem;
+    }
+
+    .subHead {
+        margin-left: 0.5rem;
+    }
+}
